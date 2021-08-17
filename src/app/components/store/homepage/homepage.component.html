@@ -1,1 +1,44 @@
-<p>homepage works!</p>
+<div class="homepage-screen">
+  <div class="container">
+    <div class="banner" style="background-image: url(assets/img/1.jpg);">
+      <div class="content">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-4 col-lg-4">
+            <h1>100% Promo</h1>
+            <form>
+              <div class="form-group">
+                <!-- <label>Enter Code</label> -->
+                <input type="text" class="form-control" placeholder="Enter Code">
+              </div>
+              <div class="login-btn">
+                <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Submit</a>
+              </div>
+            </form>
+
+            <div class="count-down">
+              <h4>Offer ends in</h4>
+              <!-- <div class="countdown" simpleCountdown [dateTo]="1581242400"></div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-cards">
+      <div class="row">
+        <div class="col-12">
+          <div class="heading">
+            <h1>Games</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-4 col-lg-3 mt-4" *ngFor="let item of list">
+          <div class="game-img">
+            <a><img src="{{item.image}}"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
