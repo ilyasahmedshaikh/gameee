@@ -1,1 +1,39 @@
-<p>dashboard works!</p>
+<div class="dashboard-screen">
+  <div class="container">
+    <div class="user-id">
+      <div class="row">
+        <div class="col-12">
+          <h5>ID CS12017</h5>
+        </div>
+      </div>
+    </div>
+    <div class="wallet" style="background-image: url(assets/img/1.jpg);">
+      <div class="row w-100">
+        <div class="col-12">
+          <div class="balance">
+            <h3>Wallet Balance</h3>
+            <p>0 Diamonds</p>
+          </div>
+          <div class="cash-btn">
+            <button class="btn btn-primary btn-lg w-50">Cashout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="diamond-section">
+      <div class="row">
+        <div class="col-12 col-md-4 col-lg-4 mt-4" *ngFor="let item of list">
+          <div class="card">
+            <div class="card-body">
+              <img src="../../../../assets/img/diamond.png" alt="diamond">
+              <p>{{item.count}}</p>
+              <div class="claim-btn">
+                <button class="btn btn-primary btn-lg w-100">Claim</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
