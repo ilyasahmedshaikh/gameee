@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { StoreRoutingModule } from './store-routing.module';
 import { StoreComponent } from './store.component';
-
+import { PopupPageComponent } from './popup-page/popup-page.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
-  declarations: [StoreComponent],
+  declarations: [StoreComponent, PopupPageComponent, HomepageComponent],
   imports: [
     CommonModule,
     StoreRoutingModule
