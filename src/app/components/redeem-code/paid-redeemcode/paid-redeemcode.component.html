@@ -1,1 +1,57 @@
-<p>paid-redeemcode works!</p>
+<div class="paid-redeemcode-screen">
+  <div class="banner" style="background-image: url(assets/img/1.jpg);">
+    <div class="container">
+      <div class="content">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6 col-lg-6">
+            <h1>Head Line 100</h1>
+            <form>
+              <div class="form-group">
+                <label>Refral Code (Optional)</label>
+                <input type="text" class="form-control" placeholder="Insert ID">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="custom-radio">
+                <div class="row mx-0">
+                  <div class="col-12 col-md-4 col-lg-4">
+                    <a (click)="onSelectedMethod('googleplay')" [ngClass]="{'active': selectedMethod == 'googleplay'}">
+                      <img src="assets/img/gp.png" alt="googleplay">
+                      <i class="far fa-circle"></i>
+                      <i class="far fa-check-circle"></i>
+                    </a>
+                  </div>
+                  <div class="col-12 col-md-4 col-lg-4">
+                    <a (click)="onSelectedMethod('paypal')" [ngClass]="{'active': selectedMethod == 'paypal'}">
+                      <img src="assets/img/pp.png" alt="paypal">
+                      <i class="far fa-circle"></i>
+                      <i class="far fa-check-circle"></i>
+                    </a>
+                  </div>
+                  <div class="col-12 col-md-4 col-lg-4">
+                    <a (click)="onSelectedMethod('amazon')" [ngClass]="{'active': selectedMethod == 'amazon'}">
+                      <img src="assets/img/az.png" alt="amazon">
+                      <i class="far fa-circle"></i>
+                      <i class="far fa-check-circle"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="generate-btn">
+                <button class="btn btn-primary btn-lg px-5">Generate</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6 col-lg-6">
+            <div class="loading-section">
+              <p>Loading...</p>
+              <p>Connecting to server...</p>
+              <p>Patching Codes...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

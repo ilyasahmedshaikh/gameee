@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaidRedeemcodeComponent implements OnInit {
 
+  selectedMethod: string = "googleplay";
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSelectedMethod(method) {
+    this.selectedMethod = method;
+    console.log(this.selectedMethod);
   }
 
 }

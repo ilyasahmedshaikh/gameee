@@ -1,0 +1,116 @@
+@import "../../../../styles.scss";
+
+.paid-redeemcode-screen {
+  .banner {
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: soft-light;
+    background-color: #000000b8;
+    // for center vertical
+    display: flex;
+    align-items: center;
+    .content {
+      padding: 30px 0;
+      text-align: center;
+      h1 {
+        color: white;
+        font-size: 52px;
+        font-weight: 600;
+        @include respond(mobile) {
+          font-size: 30px;
+        }
+      }
+      form {
+        padding-top: 12%;
+        label {
+          font-size: 20px;
+          color: white;
+          float: left;
+          font-weight: 500;
+          @include respond(mobile) {
+            font-size: 18px;
+            padding-bottom: 3px;
+          }
+        }
+        .custom-radio {
+          padding-top: 10%;
+          a {
+            padding: 8px;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            border-radius: 7px;
+            cursor: pointer;
+            img {
+              width: 80px;
+              height: auto;
+              object-fit: cover;
+              object-position: center;
+            }
+            i {
+              font-size: 18px;
+              &.fa-circle {
+                color: #a7a7a7;
+              }
+              &.fa-check-circle {
+                color: #8bc34a;
+                display: none;
+              }
+            }
+            &.active {
+              i {
+                &.fa-circle {
+                  color: #a7a7a7;
+                  display: none;
+                }
+                &.fa-check-circle {
+                  color: #8bc34a;
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+        .generate-btn {
+          padding-top: 15%;
+          float: right;
+          @include respond(mobile) {
+            padding-top: 8px;
+          }
+        }
+      }
+      .loading-section {
+        margin-top: 12%;
+        border: 1px solid white;
+        border-radius: 6px;
+        background: white;
+        padding: 10px;
+        p {
+          color: black;
+          font-size: 18px;
+          text-align: left;
+          line-height: 3.1;
+        }
+      }
+    }
+  }
+}
+
+.form-group {
+  .form-control {
+    padding: 0.375rem 3rem 0.375rem 0.75rem;
+  }
+  i {
+    position: relative;
+    bottom: 33px;
+    float: right;
+    right: 15px;
+    font-size: 20px;
+    color: #a7a7a7;
+  }
+}
