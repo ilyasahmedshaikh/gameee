@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { SharedEventsService } from 'src/core/services/shared-events/shared-events.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  show: boolean = true;
+
+  constructor(
+    private shareEvent: SharedEventsService
+  ) { }
 
   ngOnInit(): void {
+    this.shareEvent.header.subscribe(res => {
+      this.show = res;
+    })
   }
 
 }

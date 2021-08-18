@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
+import { SharedEventsService } from 'src/core/services/shared-events/shared-events.service';
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -9,7 +10,10 @@ export class HomepageComponent implements OnInit {
 
   list: any = [];
 
-  constructor() { }
+  constructor(
+    private shareEvent: SharedEventsService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.list = [
@@ -22,6 +26,13 @@ export class HomepageComponent implements OnInit {
       { image: "assets/img/g.jpg" },
       { image: "assets/img/h.jpg" },
     ]
+
+    this.shareEvent.setPresentation('header', true);
+  }
+
+  submit() {
+    this.shareEvent.setPresentation('header', false);
+    this.router.navigateByUrl('/store/popup');
   }
 
 }
