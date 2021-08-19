@@ -10,6 +10,14 @@ export class HomepageComponent implements OnInit {
 
   list: any = [];
 
+  style: {
+    'font-size': '20px',
+    'color': 'red',
+    'background-color': 'white',
+    'padding': '10px 4px',
+    'font-weight': 'bold'
+  }
+
   constructor(
     private shareEvent: SharedEventsService,
     private router: Router
