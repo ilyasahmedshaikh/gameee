@@ -1,62 +1,83 @@
 @import '../../../../styles.scss';
 
 .homepage-screen {
+  background: #cccc;
   .banner {
-    width: 100%;
-    height: 450px;
-    border-radius: 6px;
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: soft-light;
-    background-color: #000000b8;
-    .content {
+    background: #35575f;
+    padding: 40px 0 70px 0;
+    // for center vertical
+    display: flex;
+    align-items: center;
+    .left-side {
       text-align: center;
-      h1 {
-        color: white;
-        padding-top: 10px;
-        font-size: 42px;
-        font-weight: 500;
-        @include respond(mobile){
-          font-size: 33px;
-        }
+      img {
+        width: 500px;
+        height: 500px;
+        border-radius: 100%;
+        object-fit: cover;
+        object-position: center;
       }
-      form {
-        padding-top: 20px;
-        label {
-          font-size: 22px;
-          padding-bottom: 5px;
+    }
+    .right-side {
+      text-align: center;
+      .input-sec {
+        h1 {
           color: white;
-          float: left;
+          font-size: 40px;
           font-weight: 500;
           @include respond(mobile){
-            font-size: 18px;
-            padding-bottom: 3px;
+            font-size: 30px;
+          }
+        }
+        form {
+          padding-top: 20px;
+          label {
+            font-size: 22px;
+            padding-bottom: 5px;
+            color: white;
+            float: left;
+            font-weight: 500;
+            @include respond(mobile){
+              font-size: 18px;
+              padding-bottom: 3px;
+            }
           }
         }
       }
-    }
-    .count-down {
-      position: absolute;
-      bottom: 30px;
-      width: 100%;
-      text-align: center;
-      h4 {
-        color: white;
-        font-size: 24px;
-        font-weight: 500;
+      .count-down {
+        position: absolute;
+        bottom: 40px;
+        width: 100%;
+        text-align: center;
+        h4 {
+          color: white;
+          font-size: 24px;
+          font-weight: 500;
+        }
+        .countdown {
+          justify-content: center;
+          display: flex;
+          padding: 15px 0 0 0;
+        }
       }
-      .countdown {
-        justify-content: center;
-        display: flex;
-        padding: 15px 0 0 0;
+    }
+  }
+
+  .slider {
+    padding-top: 45px;
+    .carousel-item {
+      img {
+        width: 100%;
+        height: 60vh;
+        object-fit: fill;
+        object-position: center;
+        border-radius: 10px;
       }
     }
   }
 
   .game-cards {
-    padding: 45px 0;
+    padding: 40px 0;
     .heading {
       h1 {
         font-size: 25px;

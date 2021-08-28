@@ -3,27 +3,58 @@
     <i class="fas fa-chevron-left"></i>
     <span class="pl-2">Back</span>
   </a>
-  <div class="banner" style="background-image: url(assets/img/1.jpg);">
+  <div class="banner" style="background-image: url(assets/img/106.jpg);" *ngIf="isLoading && !isSuccessScreen">
     <div class="container">
       <div class="content">
         <div class="row justify-content-center">
           <div class="col-12 col-md-7 col-lg-7">
             <h1>Unlock Redeem Codes</h1>
             <div class="master">
-              <div class="text">
+              <div class="head">
                 <h6>Pay</h6>
               </div>
               <div class="image">
-                <img class="mastercard" src="assets/img/mc.svg">
-                <img class="visacard" src="assets/img/vc.png">
+                <img (click)="onPayMasterVisa()" class="mastercard" src="assets/img/mc.svg">
+                <img (click)="onPayMasterVisa()" class="visacard" src="assets/img/vc.png">
               </div>
             </div>
-            <div class="visa">
-              <div class="text">
+            <div class="visa" (click)="onPayMasterVisa()">
+              <div class="head">
                 <h6>Free</h6>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="loading" style="background-image: url(assets/img/105.jpg);" *ngIf="!isLoading && !isSuccessScreen">
+  <div class="row w-100 justify-content-center">
+    <div class="col-4">
+      <div class="load-icon">
+        <img src="assets/img/a.gif">
+        <div class="gif">
+          <img src="assets/img/b-gif.gif">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="success-screen" style="background-image: url(assets/img/107.jpg);" *ngIf="isSuccessScreen">
+  <div class="row w-100 justify-content-center">
+    <div class="col-4">
+      <div class="content">
+        <div class="gift-card">
+          <img src="../../../../assets/img/gift-card.png">
+        </div>
+        <div class="done">
+          <p>Done</p>
+        </div>
+        <div class="getnow-btn pt-3">
+          <button class="btn btn-light btn-lg w-50">Get Now</button>
         </div>
       </div>
     </div>

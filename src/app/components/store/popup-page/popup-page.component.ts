@@ -8,6 +8,8 @@ import { SharedEventsService } from 'src/core/services/shared-events/shared-even
 })
 export class PopupPageComponent implements OnInit {
 
+  isLoading: boolean = true;
+
   constructor(
     private shareEvent: SharedEventsService,
     private router: Router
@@ -20,6 +22,10 @@ export class PopupPageComponent implements OnInit {
   back() {
     this.shareEvent.setPresentation('header', true);
     this.router.navigateByUrl('/store');
+  }
+
+  onReceiveDiamonds() {
+    this.isLoading = !this.isLoading;
   }
 
 }

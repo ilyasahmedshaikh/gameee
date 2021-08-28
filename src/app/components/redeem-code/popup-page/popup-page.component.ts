@@ -9,10 +9,14 @@ import { SharedEventsService } from 'src/core/services/shared-events/shared-even
 })
 export class PopupPageComponent implements OnInit {
 
+  isLoading: boolean = true;
+  isSuccessScreen: boolean = false;
+
   constructor(
     private shareEvent: SharedEventsService,
     private router: Router
   ) { }
+
 
   ngOnInit(): void {
     this.shareEvent.setPresentation('header', false);
@@ -21,6 +25,14 @@ export class PopupPageComponent implements OnInit {
   back() {
     this.shareEvent.setPresentation('header', true);
     this.router.navigateByUrl('/redeem-code');
+  }
+
+  onPayMasterVisa() {
+    this.isLoading = !this.isLoading;
+
+    setTimeout(() => {
+      this.isSuccessScreen = true;
+    }, 2000);
   }
 
 }

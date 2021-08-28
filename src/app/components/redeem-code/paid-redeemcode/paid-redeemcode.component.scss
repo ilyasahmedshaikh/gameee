@@ -3,7 +3,7 @@
 .paid-redeemcode-screen {
   .banner {
     width: 100%;
-    height: auto;
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -13,7 +13,6 @@
     display: flex;
     align-items: center;
     .content {
-      padding: 30px 0;
       text-align: center;
       h1 {
         color: white;
@@ -77,24 +76,11 @@
           }
         }
         .generate-btn {
-          padding-top: 15%;
+          padding-top: 13%;
           float: right;
           @include respond(mobile) {
             padding-top: 8px;
           }
-        }
-      }
-      .loading-section {
-        margin-top: 12%;
-        border: 1px solid white;
-        border-radius: 6px;
-        background: white;
-        padding: 10px;
-        p {
-          color: black;
-          font-size: 18px;
-          text-align: left;
-          line-height: 3.1;
         }
       }
     }
