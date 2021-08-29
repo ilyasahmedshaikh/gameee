@@ -29,7 +29,7 @@
         font-weight: 600;
         line-height: 1.5;
         @include respond(mobile){
-          font-size: 18px;
+          font-size: 20px;
         }
       }
       form {
@@ -67,17 +67,27 @@
   // for center vertical
   display: flex;
   align-items: center;
+  @include respond(mobile){
+    background-position: center;
+    padding-left: 15px;
+  }
   .load-icon {
     text-align: center;
     background-blend-mode: soft-light;
     background-color: #ffffffa6;
     border-radius: 20px;
     padding: 35px 20px;
+    @include respond(mobile){
+      padding: 20px;
+    }
     img {
       width: 200px;
       height: auto;
       object-fit: cover;
       object-position: center;
+      @include respond(mobile){
+        width: 150px;
+      }
     }
     .gif {
       padding-top: 15%;
@@ -87,6 +97,9 @@
         border-radius: 50px;
         object-fit: cover;
         object-position: center;
+        @include respond(mobile){
+          height: 42px;
+        }
       }
     }
   }

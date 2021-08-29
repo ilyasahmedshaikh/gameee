@@ -36,6 +36,9 @@
         }
         .custom-radio {
           padding-top: 10%;
+          @include respond(mobile){
+            padding-top: 2%;
+          }
           a {
             padding: 8px;
             height: 50px;
@@ -45,6 +48,9 @@
             background: white;
             border-radius: 7px;
             cursor: pointer;
+            @include respond(mobile){
+              margin-top: 15px;
+            }
             img {
               width: 80px;
               height: auto;
@@ -79,7 +85,8 @@
           padding-top: 13%;
           float: right;
           @include respond(mobile) {
-            padding-top: 8px;
+            padding-top: 25px;
+            width: 100%;
           }
         }
       }

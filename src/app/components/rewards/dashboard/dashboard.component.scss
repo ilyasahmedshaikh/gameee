@@ -1,5 +1,14 @@
 @import '../../../../styles.scss';
 
+.back-btn {
+  color: black;
+  text-transform: capitalize;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
 .dashboard-screen {
   padding: 28px 0;
   .user-id {
@@ -20,7 +29,7 @@
     background-size: cover;
     background-position: center;
     background-blend-mode: soft-light;
-    background-color: #000000b8;
+    background-color: #00000042;
     // for center vertical
     display: flex;
     align-items: center;

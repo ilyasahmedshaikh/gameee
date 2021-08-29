@@ -21,6 +21,9 @@
     // for center vertical
     display: flex;
     align-items: center;
+    @include respond(mobile){
+      background-position: center;
+    }
     .content {
       text-align: center;
       h1 {
@@ -98,17 +101,27 @@
   // for center vertical
   display: flex;
   align-items: center;
+  @include respond(mobile){
+    background-position: center;
+    padding-left: 15px;
+  }
   .load-icon {
     text-align: center;
     background-blend-mode: soft-light;
     background-color: #ffffffa6;
     border-radius: 20px;
     padding: 35px 20px;
+    @include respond(mobile){
+      padding: 20px;
+    }
     img {
       width: 200px;
       height: auto;
       object-fit: cover;
       object-position: center;
+      @include respond(mobile){
+        width: 150px;
+      }
     }
     .gif {
       padding-top: 15%;
@@ -134,8 +147,15 @@
   // for center vertical
   display: flex;
   align-items: center;
+  @include respond(mobile){
+    background-position: center;
+  }
   .content {
     text-align: center;
+    @include respond(mobile){
+      text-align: center;
+      padding-left: 15px;
+    }
     .gift-card {
       padding-bottom: 20px;
       img {

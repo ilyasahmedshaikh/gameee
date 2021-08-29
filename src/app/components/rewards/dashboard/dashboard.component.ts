@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SharedEventsService } from 'src/core/services/shared-events/shared-events.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -16,19 +18,21 @@ export class DashboardComponent implements OnInit {
     },
     { id: 3,
       count: "300"
-    },
-    { id: 4,
-      count: "400"
-    },
-    { id: 5,
-      count: "500"
     }
   ];
 
-  constructor() { }
+  constructor(
+    private shareEvent: SharedEventsService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+    this.shareEvent.setPresentation('header', false);
+  }
 
+  back() {
+    this.shareEvent.setPresentation('header', true);
+    this.router.navigateByUrl('/rewards');
   }
 
 }
