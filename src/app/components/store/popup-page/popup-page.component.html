@@ -1,4 +1,4 @@
-<div class="popup-page-screen">
+<div class="popup-page-screen" *ngIf="loading">
   <a (click)="back()" class="back-btn">
     <i class="fas fa-chevron-left"></i>
     <span class="pl-2">Back</span>
@@ -53,7 +53,7 @@
   </div>
 </div>
 
-<div class="loading" style="background-image: url(assets/img/105.jpg);" *ngIf="!isLoading">
+<div class="loading" style="background-image: url(assets/img/105.jpg);" *ngIf="!isLoading && loading">
   <div class="row w-100 justify-content-center">
     <div class="col-12 col-md-4 col-lg-4">
       <div class="load-icon">
@@ -64,4 +64,9 @@
       </div>
     </div>
   </div>
+</div>
+
+<!-- for loader to hold page for sometime  -->
+<div class="loader" *ngIf="!loading">
+  <img src="assets/img/loading.gif" alt="Loading ..." />
 </div>

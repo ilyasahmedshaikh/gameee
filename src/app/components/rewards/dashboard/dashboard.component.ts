@@ -9,6 +9,8 @@ import { SharedEventsService } from 'src/core/services/shared-events/shared-even
 })
 export class DashboardComponent implements OnInit {
 
+  loading: boolean = false;
+
   list: any = [
     { id: 1,
       count: "100"
@@ -28,6 +30,10 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.shareEvent.setPresentation('header', false);
+
+    setTimeout(() => {
+      this.loading = true;
+    }, 1500);
   }
 
   back() {

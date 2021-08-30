@@ -10,6 +10,9 @@ export class PopupPageComponent implements OnInit {
 
   isLoading: boolean = true;
 
+  // for loader to hold page for sometime
+  loading: boolean = false;
+
   constructor(
     private shareEvent: SharedEventsService,
     private router: Router
@@ -17,6 +20,10 @@ export class PopupPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.shareEvent.setPresentation('header', false);
+
+    setTimeout(() => {
+      this.loading = true;
+    }, 1500);
   }
 
   back() {
