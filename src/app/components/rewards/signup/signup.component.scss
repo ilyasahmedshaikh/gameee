@@ -25,6 +25,18 @@
       display: flex;
       align-items: center;
     }
+    .logo {
+      padding-bottom: 40px;
+      a {
+        cursor: pointer;
+        img {
+          width: 68px;
+          height: auto;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
     .left-side {
       .input-sec {
         h1 {
