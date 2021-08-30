@@ -63,3 +63,13 @@ input[type="color"]:focus,
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.countdown {
+  div {
+    div {
+      &:first-child {
+        display: none !important;
+      }
+    }
+  }
+}
